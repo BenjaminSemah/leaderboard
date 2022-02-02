@@ -20,8 +20,8 @@
       </div>
       <div class="form-container">
         <h2>Add your Score</h2>
-        <input class="name-input" type="text" placeholder="Your Name" />
-        <input class="score-input" type="text" placeholder="Your Score" />
+        <input class="name-input" type="text" placeholder="Your Name" minlength="1" required/>
+        <input class="score-input" type="number" placeholder="Your Score" maxlength="4" pattern="[0-9]+" required/>
         <br />
         <div class="fail-alert"></div>
         <div class="submit-div">

@@ -22,7 +22,7 @@ export async function getScores() {
   scoreBoard.innerHTML = scoreHTML;
 }
 
-export async function addScores() {
+export const addScores = async () => {
   await fetch(requestURL, {
     method: 'POST',
     headers: {
