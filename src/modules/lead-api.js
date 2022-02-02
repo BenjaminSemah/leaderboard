@@ -4,7 +4,7 @@ const scoreBoard = document.querySelector('#score-board');
 
 const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1FO2b9q2LcMXOmf0R1EU/scores/';
 
-export async function getScores() {
+export const getScores = async () => {
   const response = await fetch(requestURL);
   const scoresArr = await response.json();
   const devScores = scoresArr.result;
