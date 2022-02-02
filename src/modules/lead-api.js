@@ -1,7 +1,8 @@
-import { scores } from './add-render.js';
-import { scoreBoard } from './add-render.js';
+export const userInput = document.querySelector(".name-input");
+export const scoreInput = document.querySelector(".score-input");
+const scoreBoard = document.querySelector('#score-board');
 
-const requestURL = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/bJm7lusovv0OQQFfuvEx/scores/";
+const requestURL = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BHoD0BPYjAhBYV6sxpn7/scores/";
 
 export async function getScores() {
   const response = await fetch(requestURL);
@@ -19,36 +20,21 @@ export async function getScores() {
     ` 
   })
   scoreBoard.innerHTML = scoreHTML;
-  // for (let scoreObj of devScores) {
-  //   scores.push(scoreObj);
-  // }
 };  
 
-
-
-
-
-
-
-
-// async function setGame() {
-//   const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/'
-//   const request = new Request(requestURL);
-
-//   const response = await fetch(request, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//       'name': 'Happy Devs'
-//     })
-//   })
-
-//   const gameID = await response.json();
-//   console.log(gameID);
-// }
-
-// setGame(); //Set a condition... If game doesn't exist, setGame
-//Game ID: bpLwHtek8IZYib7x7AC3
-
+export async function addScores() {
+  const response = await fetch(requestURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(
+      {
+        user: userInput.value.trim(),
+        score: scoreInput.value.trim()
+      }
+    )
+  });
+  userInput.value = '';
+  scoreInput.value = '';
+}

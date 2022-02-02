@@ -61,3 +61,7 @@ h1 {
 #submit-btn {
   margin-left: 120px;
 }
+
+.fail-alert {
+  color: red;
+}

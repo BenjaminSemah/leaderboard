@@ -1,25 +1,35 @@
 import './style.css';
-import { renderScore, addScore } from './modules/add-render.js';
-import { getScores } from './modules/lead-api.js';
+import { addScores , getScores, userInput, scoreInput } from './modules/lead-api.js';
 
+const submitBtn = document.querySelector("#submit-btn");
+const failAlert = document.querySelector('.fail-alert');
 const refreshBtn = document.querySelector('#refresh-btn');
-// const submitBtn = document.querySelector('#submit-btn');
-
-// submitBtn.addEventListener('click', () => {
-//   addScore();
-//   renderScore();
-//   console.log("submit")
-// });
-
 
 window.addEventListener('pageshow', () => {
-  console.log('Window!');
   getScores();
 })
 
 refreshBtn.addEventListener('click', () => {
-  console.log('Refresh!');
   getScores();
-  // renderScore();
 })
 
+submitBtn.addEventListener("click", () => {
+  console.log('Submit');
+  if (
+    isNaN(scoreInput.value) === true ||
+    scoreInput.value === "" ||
+    userInput.value === ""
+  ) {
+    console.log('Fail');
+    scoreInput.value = '';
+    failAlert.innerHTML = 'Submission failed. Try again.'
+  } else {
+    console.log('Pass');
+    addScores();
+  }
+});
+
+scoreInput.addEventListener('click', () => {
+  console.log('ScoreInput');
+  failAlert.innerHTML = '';
+})
