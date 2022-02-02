@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# TO-DO LIST APP
+# HAPPY DEVS LEADERBOARD
 
->This app allows users to submit their scores to be ranked on the Leaderboard
+>This HAPPY DEVS LEADERBOARD app allows users to submit their scores to be ranked on the Leaderboard
 
 
 ## Built With
