@@ -1,9 +1,29 @@
 import './style.css';
-import { renderScore, addScore } from './modules/add-render.js';
+import {
+  addScores, getScores, userInput, scoreInput,
+} from './modules/lead-api.js';
 
 const submitBtn = document.querySelector('#submit-btn');
+const failAlert = document.querySelector('.fail-alert');
+const refreshBtn = document.querySelector('#refresh-btn');
+
+window.addEventListener('pageshow', () => {
+  getScores();
+});
+
+refreshBtn.addEventListener('click', () => {
+  getScores();
+});
 
 submitBtn.addEventListener('click', () => {
-  addScore();
-  renderScore();
+  if (scoreInput.value === '' || userInput.value === '') {
+    scoreInput.value = '';
+    failAlert.innerHTML = 'Submission failed. Try again.';
+  } else {
+    addScores();
+  }
+});
+
+scoreInput.addEventListener('click', () => {
+  failAlert.innerHTML = '';
 });
