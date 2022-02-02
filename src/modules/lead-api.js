@@ -2,7 +2,7 @@ export const userInput = document.querySelector('.name-input');
 export const scoreInput = document.querySelector('.score-input');
 const scoreBoard = document.querySelector('#score-board');
 
-const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1FO2b9q2LcMXOmf0R1EU/scores/';
+const requestURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/FN8AxSqDbiVojvawkFIO/scores/';
 
 export const getScores = async () => {
   const response = await fetch(requestURL);
@@ -20,7 +20,7 @@ export const getScores = async () => {
     `;
   });
   scoreBoard.innerHTML = scoreHTML;
-}
+};
 
 export const addScores = async () => {
   await fetch(requestURL, {
@@ -37,4 +37,4 @@ export const addScores = async () => {
   });
   userInput.value = '';
   scoreInput.value = '';
-}
+};
