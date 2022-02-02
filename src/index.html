@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BVS Leaderboard</title>
-</head>
-<body>
-  <h1>Leaderboard</h1>
-  <div class="main-container">
-    <div class="board-container">
-      <div class="board-header">
-        <h2>Recent Scores</h2>
-        <button type="button">Refresh</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BVS Leaderboard</title>
+  </head>
+  <body>
+    <h1>Leaderboard</h1>
+    <div class="main-container">
+      <div class="board-container">
+        <div class="board-header">
+          <h2>Recent Scores</h2>
+          <button id="refresh-btn" type="button">Refresh</button>
+        </div>
+        <ul id="score-board">
+          <!-- Scores Generated Dynamically with JS -->
+        </ul>
       </div>
-      <ul id="score-board">
-        <!-- Scores Generated Dynamically with JS -->
-      </ul>
+      <div class="form-container">
+        <h2>Add your Score</h2>
+        <input class="name-input" type="text" placeholder="Your Name" />
+        <input class="score-input" type="text" placeholder="Your Score" />
+        <br />
+        <div class="submit-div">
+          <button id="submit-btn" type="button">Submit</button>
+        </div>
+      </div>
     </div>
-    <div class="form-container">
-      <h2>Add your Score</h2>
-      <input class="name-input" type="text" placeholder="Your Name">
-      <input class="score-input" type="text" placeholder="Your Score">
-      <br>
-      <div class="submit-div">
-        <button id="submit-btn" type="button">Submit</button>
-      </div> 
-    </div>
-  </div>
-</body>
+  </body>
 </html>
