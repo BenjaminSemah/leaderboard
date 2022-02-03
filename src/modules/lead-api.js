@@ -9,7 +9,7 @@ export const getScores = async () => {
   const scoresArr = await response.json();
   const devScores = scoresArr.result;
   const sortedScores = devScores.sort((a, b) => b.score - a.score);
-  
+
   let scoreHTML = '';
   sortedScores.forEach((player) => {
     scoreHTML
