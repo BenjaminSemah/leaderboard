@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:wght@300;400;700&family=Poppins:wght@300;700&family=Readex+Pro:wght@200;500&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
+  background-color: rgb(35, 168, 221);
+  color: whitesmoke;
+  width: 425px;
   margin-left: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(51, 55, 56);
 }
 
 .main-container {
@@ -29,9 +40,11 @@ h1 {
 
 #score-board {
   list-style: none;
-  border: 2px solid grey;
+  border: 3px solid rgb(35, 168, 221);
   padding-left: 0;
   margin: 0;
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.6); 
+  box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.6);
 }
 
 .single-score {
@@ -40,7 +53,8 @@ h1 {
 }
 
 .single-score:nth-child(even) {
-  background-color: rgb(226, 224, 224);
+  /* background-color: rgb(226, 224, 224); */
+  background-color: rgb(222, 238, 245);
 }
 
 .form-container {
@@ -68,4 +82,27 @@ h1 {
 
 .fail-alert {
   color: red;
+}
+
+button {
+  background-color: rgb(35, 168, 221);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+}
+
+button:hover {
+  background-color: white;
+  color: rgb(35, 168, 221);
+  border: 1px solid rgb(35, 168, 221);
+}
+
+input {
+  border: 2px solid rgb(35, 168, 221);
+  padding: 5px 10px;
+}
+
+::placeholder {
+  color: rgb(115, 119, 121);
+  opacity: 1;
 }
