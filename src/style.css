@@ -43,8 +43,8 @@ h2 {
   border: 3px solid rgb(35, 168, 221);
   padding-left: 0;
   margin: 0;
-  -webkit-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.6); 
-  box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.6);
 }
 
 .single-score {
