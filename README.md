@@ -4,6 +4,8 @@
 
 >The HAPPY DEVS LEADERBOARD app allows users to submit their scores to be ranked on the Leaderboard.
 
+## Live Demo
+[Live Demo Link](https://devs-leaderboad.netlify.app/)
 
 ## Built With
 
