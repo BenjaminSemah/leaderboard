@@ -8,9 +8,10 @@ export const getScores = async () => {
   const response = await fetch(requestURL);
   const scoresArr = await response.json();
   const devScores = scoresArr.result;
+  const sortedScores = devScores.sort((a, b) => b.score - a.score);
 
   let scoreHTML = '';
-  devScores.forEach((player) => {
+  sortedScores.forEach((player) => {
     scoreHTML
     += `
     <li class="single-score">
