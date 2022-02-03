@@ -62,6 +62,10 @@ h1 {
   margin-left: 120px;
 }
 
+.success-alert {
+  color: green;
+}
+
 .fail-alert {
   color: red;
 }
