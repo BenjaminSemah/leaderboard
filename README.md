@@ -2,7 +2,7 @@
 
 # HAPPY DEVS LEADERBOARD
 
->This HAPPY DEVS LEADERBOARD app allows users to submit their scores to be ranked on the Leaderboard
+>The HAPPY DEVS LEADERBOARD app allows users to submit their scores to be ranked on the Leaderboard.
 
 
 ## Built With
@@ -15,11 +15,12 @@
 ### To get a local copy, run the following steps:
 
 - Clone the repository with `git@github.com:BenjaminSemah/leaderboard.git`
-- Open the folder with your code editor
+- Navigate to the folder `cd leaderboard`
+- Open the project with your code editor
 - Run `npm install` to install all dependencies
 - Run `npm start` and go to `http://localhost:8080//` to launch the server.
 
-### AUTHOR
+## Author
 
 👤 **Benjamin Semah**
 
