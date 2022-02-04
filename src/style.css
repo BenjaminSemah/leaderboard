@@ -38,6 +38,10 @@ h2 {
   justify-content: space-between;
 }
 
+.fixed-scores-container {
+  height: 100%;
+}
+
 #score-board {
   list-style: none;
   border: 3px solid rgb(35, 168, 221);
@@ -45,6 +49,10 @@ h2 {
   margin: 0;
   -webkit-box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  overflow-y: auto;
 }
 
 .single-score {
