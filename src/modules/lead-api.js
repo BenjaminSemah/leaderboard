@@ -14,7 +14,7 @@ export const getScores = async () => {
   sortedScores.forEach((player) => {
     scoreHTML
     += `
-    <li class="single-score">
+    <li class="single-score scrollable">
       <p class="name">${player.user}</p>
       <p class="score">${player.score}</p>
     </li>
